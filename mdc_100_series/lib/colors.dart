@@ -10,6 +10,5 @@ const kShrineBrown900 = Color(0xFF442B2D);
 
 const kShrineErrorRed = Color(0xFFC5032B);
 
-const kbackground = Color(0xFFF5F5DC);
-const kShrineBackgroundWhite = Colors.white;
+const kBackground = Color(0xFFF5F5DC);
 const kShrinePurple = Color(0xFF5D1049);

@@ -28,7 +28,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/pokemart.png
-    # TODO: Add slanted menu asset (104)
+    - assets/slanted_menu.png
     - assets/0.png
     - assets/1.png
     - assets/2.png
