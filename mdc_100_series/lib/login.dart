@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'colors.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -23,16 +24,18 @@ class _LoginPageState extends State<LoginPage> {
               children: <Widget>[
                 Image.asset('assets/pokemart.png'),
                 const SizedBox(height: 16.0),
-                const Text('PokéMart'),
+                Text(
+                  'PokéMart',
+                  style: Theme.of(context).textTheme.headlineSmall,
+                  ),
               ],
             ),
-            const SizedBox(height: 80.0),
+            const SizedBox(height: 60.0),
             // TODO: Add TextField widgets (101)
             // [Name]
             TextField(
               controller: _usernameController,
               decoration: const InputDecoration(
-                filled: true,
                 labelText: 'Username',
               ),
             ),
@@ -42,7 +45,6 @@ class _LoginPageState extends State<LoginPage> {
             TextField(
               controller: _passwordController,
               decoration: const InputDecoration(
-                filled: true,
                 labelText: 'Password',
               ),
               obscureText: true,
@@ -56,22 +58,38 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
                 // TODO: Add buttons (101)
-            TextButton(
+            const SizedBox(height: 5.0),
+            ElevatedButton(
               child: const Text('CANCEL'),
               onPressed: () {
-                // TODO: Clear the text fields (101)
                 _usernameController.clear();
                 _passwordController.clear();
               },
+              style: ElevatedButton.styleFrom(
+                foregroundColor: kShrineBrown900,
+                backgroundColor: kShrinePink100,
+                elevation: 8.0,
+                shape: const BeveledRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(7.0)),
+                ),
+              ),
             ),
             // TODO: Add an elevation to NEXT (103)
             // TODO: Add a beveled rectangular border to NEXT (103)
+            const SizedBox(height: 5.0),
             ElevatedButton(
               child: const Text('NEXT'),
               onPressed: () {
-            // TODO: Show the next page (101) 
-            Navigator.pop(context); 
+                Navigator.pop(context);
               },
+              style: ElevatedButton.styleFrom(
+                foregroundColor: kShrineBrown900,
+                backgroundColor: kShrinePink100,
+                elevation: 8.0,
+                shape: const BeveledRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(7.0)),
+                ),
+              ),
             ),
           ],
         ),
